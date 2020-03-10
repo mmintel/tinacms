@@ -16,4 +16,6 @@ limitations under the License.
 
 */
 
-export * from './Wysiwyg'
+export * from './image-commands'
+export * from './link-commands'
+export * from './horizontal-rule-commands'

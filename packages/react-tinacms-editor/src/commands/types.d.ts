@@ -16,4 +16,8 @@ limitations under the License.
 
 */
 
-export * from './Wysiwyg'
+import { EditorState } from 'prosemirror-state'
+
+export interface Command {
+  (state: EditorState, ...options: any[]): void
+}

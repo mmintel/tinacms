@@ -16,4 +16,15 @@ limitations under the License.
 
 */
 
-export * from './Wysiwyg'
+import { EditorState } from 'prosemirror-state'
+import { EditorView } from 'prosemirror-view'
+
+type Dispatch = typeof EditorView.prototype.dispatch
+
+export function insertHr(state: EditorState, dispatch: Dispatch | null) {
+  const type = state.schema.nodes.horizontal_rule
+  if (dispatch) {
+    dispatch(state.tr.replaceSelectionWith(type.create()).scrollIntoView())
+  }
+  return true
+}
