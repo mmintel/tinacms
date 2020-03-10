@@ -57,10 +57,6 @@ interface Props {
   sticky?: boolean | string
 }
 
-interface State {
-  //
-}
-
 const BoldControl = markControl({
   mark: 'strong',
   Icon: BoldIcon,

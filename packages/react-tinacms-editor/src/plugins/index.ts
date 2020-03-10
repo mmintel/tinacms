@@ -43,7 +43,7 @@ export interface KeymapPlugin {
   onCondition?(schema: Schema): boolean
 }
 
-function byType<P extends Plugin>(__type: string) {
+function byType(__type: string) {
   return (plugin: Plugin) => plugin.__type === __type
 }
 
